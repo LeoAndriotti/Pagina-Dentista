@@ -7,51 +7,71 @@
     <title>Sorriso Perfeito</title>
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/reset.css">
+    <script src="scripts/script.js" defer></script>
 
 </head>
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="modal-title"></h2>
+        <form action="https://formsubmit.co/2001leomoura@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="Solicitação de Serviço - Sorriso Perfeito">
+            <input type="text" id="servico" name="servico" readonly>
+            <input type="text" name="name" placeholder="Seu nome" required>
+            <input type="email" name="email" placeholder="Seu email" required>
+            <textarea name="mensagem" placeholder="Descreva seu queixa..." rows="4" style="resize: none;"></textarea>
+            <button type="submit">Solicitar Atendimento</button>
+        </form>
+    </div>
+</div>
 
 <body>
     <header>
         <div class="menu">
-            <img src="interatividade/img/logo.png" alt="" width="100" height="100">
+            <img src="interatividade/img/logo.png" alt="Logo Sorriso Perfeito" class="logo">
             <nav>
-                <ul>
-                    <li> <a href="#home">Home</a></li>
-                    <li> <a href="">Serviços</a></li>
-                    <li> <a href="">Galeria de Sorrisos</a></li>
-                    <li> <a href="">Depoimentos</a></li>
-                    <li> <a href="">Contatos</a></li>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#Servicos">Serviços</a></li>
+                    <li><a href="#">Galeria de Sorrisos</a></li>
+                    <li><a href="#">Depoimentos</a></li>
+                    <li><a href="#">Contatos</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+
     <main>
         <section class="home">
-            <h1 class="titulo-principal">Na <bold>Sorriso Perfeito</bo>, o seu sorriso é a nossa prioridade.</h1>
+            <h1 class="titulo-principal">Na Sorriso Perfeito, o seu sorriso é a nossa prioridade.</h1>
             <h3>Com atendimento humanizado e foco em estética e reabilitação oral, ajudamos você a recuperar a confiança
                 ao
                 sorrir.
                 Especializados em Prótese Dentária e Saúde Bucal Integral, cuidamos não apenas do seu sorriso, mas de
                 toda a
                 sua autoestima.</h3>
+            <h1 class="titulo-principal">Nossos Serviços:</h1>
+            <section class="Servicos">
 
-            <div class="Servicos">
                 <div class="trabalhos">
                     <h2>Prótese Dentária</h2>
                     <img src="interatividade/img/protese.png" alt="">
                 </div>
                 <div class="trabalhos">
                     <h2>Limpeza e Clareamento</h2>
-                    <img src="interatividade/img/clareamento.png" alt="" width="250" height="250"> 
+                    <img src="interatividade/img/clareamento.png" alt="">
                 </div>
                 <div class="trabalhos">
                     <h2>Instalação de Aparelhos</h2>
+                    <img src="interatividade/img/aparelho.png" alt="">
                 </div>
                 <div class="trabalhos">
                     <h2>Tratamento de Canal</h2>
+                    <img src="interatividade/img/canal.png" alt="">
                 </div>
                 <div class="trabalhos">
                     <h2>Obturação</h2>
+                    <img src="interatividade/img/obturacao.png" alt="">
                 </div>
 
             </div>

@@ -1,28 +1,54 @@
+/* Estilo geral do menu */
 .menu {
-    background-color: #87cefaa2;
-    padding: 1%;
-    border-radius: 5px;
+    background-color: #b3e5fc;
+    padding: 20px 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
 }
-.menu li {
-    display: inline-block;
-    margin-right: 4%;
+
+.logo {
+    width: 100px;
+    height: auto;
 }
-.menu li a {
-    color: white;
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: #ffffff;
     text-decoration: none;
-    display: inline-block;
-    width: 100%;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
 }
-.menu li a:hover {
-    color: #05032a;
-    text-decoration: underline;
+
+/* Efeito ao passar o mouse */
+.nav-links a:hover {
+    background-color: #ffffff;
+    color: #2196f3;
+    text-decoration: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
+
 .titulo-principal {
     text-align: center;
     color: #05032a;
     font-size: 1.8em;
     margin-top: 1em;
     font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .home h3{
     text-align: center;
@@ -31,6 +57,7 @@
     margin-top: 1em;
     width: 75%;
     margin-left: 12.5%;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .home h2{
     text-align: center;
@@ -51,7 +78,7 @@
     gap: 1em;             
     justify-content: start; 
     flex-wrap: wrap;      
-    margin-left: 3em;
+    margin-left: 10em;
 }
 
 .trabalhos { 
@@ -71,5 +98,88 @@
     padding: 0.5em;
     font-weight: bold;
 }
+.trabalhos img {
+    max-width: 100%;
+    max-height: 10em;
+    object-fit: contain;
+    width: 300;
+    height: 300;
+}
+.trabalhos:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* sombra mais forte ao passar o mouse */
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+}
 
+.modal-content {
+    background: #fff;
+    padding: 2em;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    animation: fadeIn 0.3s ease;
+    position: relative;
+}
 
+.modal-content h2 {
+    margin-top: 0;
+    color: #2196f3;
+    text-align: center;
+    font-size: 2em;
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.modal-content input,
+.modal-content textarea {
+    padding: 0.8em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    width: 100%;
+}
+
+.modal-content button {
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    padding: 0.8em;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.modal-content button:hover {
+    background-color: #1976d2;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #999;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
