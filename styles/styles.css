@@ -1,0 +1,71 @@
+.menu {
+    background-color: #87cefaa2;
+    padding: 1%;
+    border-radius: 5px;
+}
+.menu li {
+    display: inline-block;
+    margin-right: 4%;
+}
+.menu li a {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+}
+.menu li a:hover {
+    color: #05032a;
+    text-decoration: underline;
+}
+.titulo-principal {
+    text-align: center;
+    color: #05032a;
+    font-size: 1.8em;
+    margin-top: 1em;
+    font-weight: bold;
+}
+.home h3{
+    text-align: center;
+    color: #05032a;
+    font-size: 1em;
+    margin-top: 1em;
+    width: 75%;
+    margin-left: 12.5%;
+}
+.home h2{
+    text-align: center;
+    color: #05032a;
+    font-size: 1.5em;
+    margin-top: 1em;
+    font-weight: bold;
+}
+
+.servicos{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2em;
+}
+.servicos{
+     display: flex;
+     flex-direction: column;
+}
+.trabalhos{
+    display: flex;
+    flex-direction: column;
+    background-color: #87cefaa2;
+    width: 15em;
+    height: 15em;
+    border-radius: 10px;
+    margin-top: 4em;
+    margin-left: 1em;
+    
+}
+.protese h2{
+    text-align: center;
+    color: white;
+    font-size: 1.2em;
+    padding: 0.5em;
+    font-weight: bold;
+}
+
