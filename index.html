@@ -11,18 +11,32 @@
 
 </head>
 <div id="modal" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2 id="modal-title"></h2>
-        <form action="https://formsubmit.co/2001leomoura@gmail.com" method="POST">
-            <input type="hidden" name="_subject" value="Solicitação de Serviço - Sorriso Perfeito">
-            <input type="text" id="servico" name="servico" readonly>
-            <input type="text" name="name" placeholder="Seu nome" required>
-            <input type="email" name="email" placeholder="Seu email" required>
-            <textarea name="mensagem" placeholder="Descreva seu queixa..." rows="4" style="resize: none;"></textarea>
-            <button type="submit">Solicitar Atendimento</button>
-        </form>
-    </div>
+  <div class="modal-content" id="modal-card-content">
+    <span class="close">&times;</span>
+    <h2 id="modal-title"></h2>
+    <p id="modal-descricao"></p>
+    <p id="modal-valor" style="font-weight: bold; color: #0277bd;"></p>
+  </div>
+
+  <div class="modal-content" id="modal-form-content" style="display: none;">
+    <span class="close">&times;</span>
+    <h2 id="modal-title-form"></h2>
+    <form action="https://formsubmit.co/2001leomoura@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="Solicitação de Serviço - Sorriso Perfeito">
+      <select id="servico-select" name="servico" required>
+        <option value="" disabled selected>Selecione um serviço</option>
+        <option value="Prótese Dentária">Prótese Dentária</option>
+        <option value="Limpeza e Clareamento">Limpeza e Clareamento</option>
+        <option value="Instalação de Aparelhos">Instalação de Aparelhos</option>
+        <option value="Tratamento de Canal">Tratamento de Canal</option>
+        <option value="Obturação">Obturação</option>
+      </select>
+      <input type="text" name="name" placeholder="Seu nome" required>
+      <input type="email" name="email" placeholder="Seu email" required>
+      <textarea name="mensagem" placeholder="Descreva seu queixa..." rows="4" style="resize: none;"></textarea>
+      <button type="submit">Solicitar Atendimento</button>
+    </form>
+  </div>
 </div>
 
 <body>
@@ -33,8 +47,8 @@
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#Servicos">Serviços</a></li>
-                    <li><a href="#">Galeria de Sorrisos</a></li>
-                    <li><a href="#">Depoimentos</a></li>
+                    <li><a href="#fotos">Galeria de Sorrisos</a></li>
+                    <li><a href="#fotos">Depoimentos</a></li>
                     <li><a href="#">Contatos</a></li>
                 </ul>
             </nav>
@@ -42,7 +56,7 @@
     </header>
 
     <main>
-        <section class="home">
+        <section class="home" id="home">
             <h1 class="titulo-principal">Na Sorriso Perfeito, o seu sorriso é a nossa prioridade.</h1>
             <h3>Com atendimento humanizado e foco em estética e reabilitação oral, ajudamos você a recuperar a confiança
                 ao
@@ -51,7 +65,7 @@
                 toda a
                 sua autoestima.</h3>
             <h1 class="titulo-principal">Nossos Serviços:</h1>
-            <section class="Servicos">
+            <section class="Servicos" id="Servicos">
 
                 <div class="trabalhos">
                     <h2>Prótese Dentária</h2>
@@ -74,9 +88,76 @@
                     <img src="interatividade/img/obturacao.png" alt="">
                 </div>
 
-            </div>
+                </div>
 
+            </section>
         </section>
+        <section id="fotos">
+            <div class="depoimentosTitulo">
+            </div>
+            <div class="containerGaleria">
+                <div class="cards-container">
+                    <div class="cards">
+                        <div class="card">
+                            <img class="imagem-card" src="interatividade/img/h1.png" alt="">
+                            <div class="titulo-card" style="color:#000000;">João Fontoura</div>
+                            <div class="card-desc">
+                                Foi muito bem atendido desde a recepção até o final do tratamento. Profissionais
+                                atenciosos
+                                e resultado impecável!"
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="imagem-card" src="interatividade/img/m1.png" alt="">
+                            <div class="titulo-card" style="color:#000000;font-weight:bold;font-size:1.3em;">Maria Joana
+                            </div>
+                            <div class="card-desc">
+                                Fui muito bem atendida desde a recepção até o final do tratamento. Profissionais
+                                atenciosos
+                                e resultado impecável!"
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="imagem-card" src="interatividade/img/h3.png" alt="">
+                            <div class="titulo-card" style="color:#000000;">Lucas</div>
+                            <div class="card-desc">
+                                Achei que seria doloroso, mas foi surpreendentemente tranquilo. O dentista explicou tudo
+                                com
+                                calma. Atendimento excelente!"
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="imagem-card" src="interatividade/img/h4.png" alt="">
+                            <div class="titulo-card" style="color:#000000;">Jones</div>
+                            <div class="card-desc">
+                                Fui muito bem atendido durante meu tratamento de canal. Tudo foi feito com cuidado e sem
+                                dor. Recomendo demais </div>
+                        </div>
+                        <div class="card">
+                            <img class="imagem-card" src="interatividade/img/h5.png" alt="">
+                            <div class="titulo-card" style="color:#000000;">Pedro</div>
+                            <div class="card-desc">
+                                "A limpeza foi rápida e eficaz. Ambiente limpo, profissionais atenciosos. Voltarei com
+                                certeza!"
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="imagem-card" src="interatividade/img/m2.png" alt="">
+                            <div class="titulo-card" style="color:#000000;">Shirley Rayane</div>
+                            <div class="card-desc">
+                                "Melhor experiência que já tive em uma clínica odontológica. Me explicaram tudo com
+                                clareza
+                                e saí de lá sorrindo </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="rodape">
+        <span> Desenvolvido por Wesley Lima e Leonardo Andriotti &copy; Todos os direitos reservados.</span>
+    </footer>
+
     </main>
 </body>
 

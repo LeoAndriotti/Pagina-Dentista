@@ -1,185 +1,267 @@
-/* Estilo geral do menu */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fdfdfd;
+  color: #222;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+header {
+  background: #e0f7fa;
+  padding: 1.5em 2em;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
 .menu {
-    background-color: #b3e5fc;
-    padding: 20px 40px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .logo {
-    width: 100px;
-    height: auto;
+  height: 80px;
+  object-fit: contain;
 }
 
 .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 2em;
 }
 
 .nav-links a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 1.1rem;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    padding: 8px 12px;
-    border-radius: 5px;
-    font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  color: #0277bd;
+  font-weight: 500;
+  font-size: 1em;
+  transition: 0.3s;
+  padding: 6px 10px;
+  border-radius: 5px;
 }
 
-/* Efeito ao passar o mouse */
 .nav-links a:hover {
-    background-color: #ffffff;
-    color: #2196f3;
-    text-decoration: none;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  background-color: #0277bd;
+  color: #fff;
 }
 
 .titulo-principal {
-    text-align: center;
-    color: #05032a;
-    font-size: 1.8em;
-    margin-top: 1em;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
-}
-.home h3{
-    text-align: center;
-    color: #05032a;
-    font-size: 1em;
-    margin-top: 1em;
-    width: 75%;
-    margin-left: 12.5%;
-    font-family: Arial, Helvetica, sans-serif;
-}
-.home h2{
-    text-align: center;
-    color: #05032a;
-    font-size: 1.5em;
-    margin-top: 1em;
-    font-weight: bold;
+  text-align: center;
+  font-size: 2em;
+  color: #01579b;
+  margin: 2em 1em 0.5em;
+  font-weight: bold;
 }
 
-.servicos{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 2em;
+.home h3 {
+  text-align: center;
+  max-width: 700px;
+  margin: 1em auto;
+  color: #333;
+  font-size: 1.1em;
 }
+
 .Servicos {
-    display: flex;         
-    gap: 1em;             
-    justify-content: start; 
-    flex-wrap: wrap;      
-    margin-left: 10em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1em;
+  justify-content: center;
+  margin: 2em auto;
+  max-width: 1200px;
+  padding: 0 1em;
 }
 
-.trabalhos { 
-    display: flex;
-    flex-direction: column;
-    background-color: #87cefaa2;
-    width: 15em;
-    height: 15em;
-    border-radius: 10px;
-    margin-top: 4em;
+.trabalhos {
+  background-color: #b3e5fc;
+  border-radius: 12px;
+  text-align: center;
+  padding: 1em;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.trabalhos:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  cursor: pointer;
 }
 
 .trabalhos h2 {
-    text-align: center;
-    color: white;
-    font-size: 1.2em;
-    padding: 0.5em;
-    font-weight: bold;
+  font-size: 1.1em;
+  margin-bottom: 0.5em;
+  color: #01579b;
 }
+
 .trabalhos img {
-    max-width: 100%;
-    max-height: 10em;
-    object-fit: contain;
-    width: 300;
-    height: 300;
+  width: 100%;
+  height: 120px;
+  object-fit: contain;
 }
-.trabalhos:hover {
-    transform: translateY(-5px);
-    cursor: pointer;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* sombra mais forte ao passar o mouse */
+
+.containerGaleria {
+  background: #e0f2f1;
+  padding: 3em 1em;
+  margin-top: 3em;
 }
+
+.cards-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow-x: auto;
+  padding: 1em;
+}
+
+.cards {
+  display: flex;
+  gap: 2em;
+  flex-wrap: nowrap;
+}
+
+.card {
+  flex: 0 0 auto;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  padding: 1.2em;
+  width: 260px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+.imagem-card {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1em;
+}
+
+.titulo-card {
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  color: #01579b;
+  text-align: center;
+}
+
+.card-desc {
+  font-size: 0.95em;
+  color: #444;
+  text-align: center;
+}
+
+.containerGaleria::before {
+  content: "Veja o que nossos pacientes dizem";
+  display: block;
+  text-align: center;
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #0277bd;
+  margin-bottom: 1.5em;
+}
+
 .modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.6);
-    justify-content: center;
-    align-items: center;
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
 }
 
 .modal-content {
-    background: #fff;
-    padding: 2em;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 400px;
-    animation: fadeIn 0.3s ease;
-    position: relative;
+  background: #fff;
+  padding: 2em;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+  animation: fadeIn 0.3s ease;
 }
 
 .modal-content h2 {
-    margin-top: 0;
-    color: #2196f3;
-    text-align: center;
-    font-size: 2em;
+  text-align: center;
+  color: #0277bd;
+  font-size: 1.5em;
+  margin-bottom: 1em;
 }
 
 .modal-content form {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
 
 .modal-content input,
-.modal-content textarea {
-    padding: 0.8em;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 1em;
-    width: 100%;
+.modal-content textarea,
+.modal-content select {
+  padding: 0.8em;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1em;
+  width: 100%;
+  font-family: inherit;
+}
+
+.modal-content select:invalid {
+  color: #888;
 }
 
 .modal-content button {
-    background-color: #2196f3;
-    color: white;
-    border: none;
-    padding: 0.8em;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.3s;
+  background-color: #0277bd;
+  color: white;
+  border: none;
+  padding: 0.8em;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .modal-content button:hover {
-    background-color: #1976d2;
+  background-color: #01579b;
 }
 
 .close {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 1.5em;
-    cursor: pointer;
-    color: #999;
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  font-size: 1.5em;
+  color: #666;
+  cursor: pointer;
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: scale(0.9); }
-    to { opacity: 1; transform: scale(1); }
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+footer.rodape {
+  background: #e0f2f1;
+  padding: 1.5em 0;
+  text-align: center;
+  font-size: 0.95em;
+  color: #333;
+  border-top: 1px solid #ccc;
+  margin-top: 3em;
 }
