@@ -11,32 +11,32 @@
 
 </head>
 <div id="modal" class="modal">
-  <div class="modal-content" id="modal-card-content">
-    <span class="close">&times;</span>
-    <h2 id="modal-title"></h2>
-    <p id="modal-descricao"></p>
-    <p id="modal-valor" style="font-weight: bold; color: #0277bd;"></p>
-  </div>
+    <div class="modal-content" id="modal-card-content">
+        <span class="close">&times;</span>
+        <h2 id="modal-title"></h2>
+        <p id="modal-descricao"></p>
+        <p id="modal-valor" style="font-weight: bold; color: #0277bd;"></p>
+    </div>
 
-  <div class="modal-content" id="modal-form-content" style="display: none;">
-    <span class="close">&times;</span>
-    <h2 id="modal-title-form"></h2>
-    <form action="https://formsubmit.co/2001leomoura@gmail.com" method="POST">
-      <input type="hidden" name="_subject" value="Solicitação de Serviço - Sorriso Perfeito">
-      <select id="servico-select" name="servico" required>
-        <option value="" disabled selected>Selecione um serviço</option>
-        <option value="Prótese Dentária">Prótese Dentária</option>
-        <option value="Limpeza e Clareamento">Limpeza e Clareamento</option>
-        <option value="Instalação de Aparelhos">Instalação de Aparelhos</option>
-        <option value="Tratamento de Canal">Tratamento de Canal</option>
-        <option value="Obturação">Obturação</option>
-      </select>
-      <input type="text" name="name" placeholder="Seu nome" required>
-      <input type="email" name="email" placeholder="Seu email" required>
-      <textarea name="mensagem" placeholder="Descreva seu queixa..." rows="4" style="resize: none;"></textarea>
-      <button type="submit">Solicitar Atendimento</button>
-    </form>
-  </div>
+    <div class="modal-content" id="modal-form-content" style="display: none;">
+        <span class="close">&times;</span>
+        <h2 id="modal-title-form"></h2>
+        <form action="https://formsubmit.co/2001leomoura@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="Solicitação de Serviço - Sorriso Perfeito">
+            <select id="servico-select" name="servico" required>
+                <option value="" disabled selected>Selecione um serviço</option>
+                <option value="Prótese Dentária">Prótese Dentária</option>
+                <option value="Limpeza e Clareamento">Limpeza e Clareamento</option>
+                <option value="Instalação de Aparelhos">Instalação de Aparelhos</option>
+                <option value="Tratamento de Canal">Tratamento de Canal</option>
+                <option value="Obturação">Obturação</option>
+            </select>
+            <input type="text" name="name" placeholder="Seu nome" required>
+            <input type="email" name="email" placeholder="Seu email" required>
+            <textarea name="mensagem" placeholder="Descreva seu queixa..." rows="4" style="resize: none;"></textarea>
+            <button type="submit">Solicitar Atendimento</button>
+        </form>
+    </div>
 </div>
 
 <body>
@@ -47,7 +47,6 @@
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#Servicos">Serviços</a></li>
-                    <li><a href="#fotos">Galeria de Sorrisos</a></li>
                     <li><a href="#fotos">Depoimentos</a></li>
                     <li><a href="#">Contatos</a></li>
                 </ul>
@@ -153,12 +152,36 @@
                 </div>
             </div>
         </section>
-    </main>
-    <footer class="rodape">
-        <span> Desenvolvido por Wesley Lima e Leonardo Andriotti &copy; Todos os direitos reservados.</span>
-    </footer>
-
-    </main>
 </body>
+</main>
+<footer class="rodape">
+    <h1>Fale Conosco</h1>
+    <div class="info-container">
+        <div class="contatos">
+            <h2>Contatos</h2>
+            <p>51 99999-9999</p>
+            <p>Rua Mercúrio 10</p>
+            <p>2001leomoura@gmail.com</p>
+        </div>
+
+        <div class="servicos">
+            <h2>Serviços</h2>
+            <p>Prótese Dentária</p>
+            <p>Limpeza e Clareamento</p>
+            <p>Instalação de Aparelhos</p>
+            <p>Tratamento de Canal</p>
+            <p>Obturação</p>
+        </div>
+
+        <div class="redes-sociais">
+            <h2>Redes Sociais</h2>
+            <a href="http://instagram.com/">Instagram</a>
+            <a href="http://facebook.com/">Facebook</a>
+           <a href="http://whatsapp.com/">WhatsApp</a>
+        </div>
+    </div>
+
+    <span> Desenvolvido por Wesley Lima e Leonardo Andriotti &copy; Todos os direitos reservados.</span>
+</footer>
 
 </html>

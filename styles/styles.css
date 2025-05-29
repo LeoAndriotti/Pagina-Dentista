@@ -37,7 +37,7 @@ header {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 2em;
+  gap: 2.5em;
 }
 
 .nav-links a {
@@ -115,7 +115,7 @@ header {
 }
 
 .cards-container {
-  max-width: 1200px;
+  max-width: 2000px;
   margin: 0 auto;
   overflow-x: auto;
   padding: 1em;
@@ -265,3 +265,48 @@ footer.rodape {
   border-top: 1px solid #ccc;
   margin-top: 3em;
 }
+footer.rodape a {
+  color: #0277bd;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.rodape h1{
+  font-size: 1.8em;
+  color: #01579b;
+  margin-bottom: 0.5em;
+}
+.rodape h2 {
+  font-size: 1.2em;
+  color: #0277bd;
+  margin-bottom: 0.5em;
+}
+
+.info-container {
+  display: flex;
+  justify-content: space-between; 
+  align-items: flex-start;
+  padding: 2em 4%;
+  flex-wrap: wrap;
+}
+
+.contatos {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.servicos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.redes-sociais {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+

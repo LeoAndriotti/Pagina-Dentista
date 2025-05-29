@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const servicosInfo = {
         "Prótese Dentária": {
             descricao: "Substituição de dentes perdidos com estrutura funcional e estética.",
-            valor: "R$ 1.200,00"
+            valor: "R$ 1.200,00"    
         },
         "Limpeza e Clareamento": {
             descricao: "Higienização profunda e clareamento para um sorriso mais branco.",
