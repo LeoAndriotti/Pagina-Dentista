@@ -48,6 +48,7 @@ header {
   transition: 0.3s;
   padding: 6px 10px;
   border-radius: 5px;
+
 }
 
 .nav-links a:hover {
@@ -334,4 +335,75 @@ footer.rodape a {
 .main-bg > * {
   position: relative;
   z-index: 3;
+}
+.hamburger {
+  display: none;
+  font-size: 2em;
+  color: #0277bd;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #e0f7fa;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 1em 0;
+    z-index: 99;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: left;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 0.8em 1em;
+    width: 100%;
+  }
+   .info-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+    padding: 1.5em 2em;
+    text-align: center;
+  }
+
+  .contatos,
+  .servicos,
+  .redes-sociais {
+    align-items: center;
+    text-align: center;
+  }
+
+  .rodape h1 {
+    font-size: 1.5em;
+  }
+
+  footer.rodape span {
+    display: block;
+    margin-top: 2em;
+    font-size: 0.85em;
+    padding: 0 1em;
+  }
 }
