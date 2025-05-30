@@ -254,6 +254,7 @@ header {
     opacity: 1;
     transform: scale(1);
   }
+
 }
 
 footer.rodape {
@@ -309,4 +310,28 @@ footer.rodape a {
   align-items: flex-end;
   text-align: right;
 }
+.main-bg {
+  background-image: url('../interatividade/img/background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 80vh;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
 
+.main-bg::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(173, 216, 230, 0.6);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.main-bg > * {
+  position: relative;
+  z-index: 3;
+}
